@@ -1,0 +1,23 @@
+<div class="card">
+
+    <div class="card-header" id="fightersHeadingThree">
+        <h2 class="h5 mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#fightersCollapseThree" aria-expanded="false" aria-controls="fightersCollapseThree">
+                Faction runemark
+            </button>
+        </h2>
+    </div>
+
+    <div class="collapse" id="fightersCollapseThree">
+        <div class="card-body">
+
+            <div id="factionRunemarkSelect" class="d-flex flex-wrap runemarks dark" onclick="selectFactionRunemark(event)">
+                {% include fighters/factionRunemarks.html %}
+
+            </div>
+            <label class="btn btn-primary" for="additionalFactionMarkSelect">Load custom runemark</label>
+            <input class="form-control-file" id="additionalFactionMarkSelect" oninput="onFactionRunemarkFileSelect(this)" type="file">
+        </div>
+    </div>
+
+</div>

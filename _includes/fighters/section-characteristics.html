@@ -1,0 +1,91 @@
+<div class="card">
+
+    <div class="card-header" id="fightersHeadingFour">
+        <h2 class="h5 mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#fightersCollapseFour" aria-expanded="false" aria-controls="fightersCollapseFour">
+                Characteristics
+            </button>
+        </h2>
+    </div>
+
+    <div class="collapse" id="fightersCollapseFour">
+        <div class="card-body">
+          <div class="col-auto">
+            <label class="sr-only" for="inlineFormInputGroup">Faction</label>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <div class="input-group-text">Alliance</div>
+              </div>
+              <input type="text" class="form-control" id="alliance" name="alliance" oninput="setAlliance(this)" type="string" value="name">
+            </div>
+          </div>
+
+          <div class="col-auto">
+            <label class="sr-only" for="inlineFormInputGroup">fighter name</label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">Name</div>
+              </div>
+              <input type="text" class="form-control" id="fighterName" name="fighterName" oninput="setName(this)" type="string" value="name">
+            </div>
+          </div>
+
+          <div class="col-auto">
+            <label class="sr-only" for="inlineFormInputGroup">Movement</label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">Movement</div>
+              </div>
+                <input class="form-control" id="movement" min="0" max="100" name="movement" oninput="setMovement(this)" type="number" value="4">
+              </div>
+          </div>
+
+          <div class="col-auto">
+            <label class="sr-only" for="inlineFormInputGroup">Toughness</label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">Toughness</div>
+              </div>
+                <input class="form-control" id="toughness" min="0" max="100" name="toughness" oninput="setToughness(this)" type="number" value="3">
+              </div>
+          </div>
+
+          <div class="col-auto">
+            <label class="sr-only" for="inlineFormInputGroup">Wounds</label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">Wounds</div>
+              </div>
+              <input class="form-control" id="numWounds" min="1" max="1000" name="numWounds" oninput="setWounds(this)" type="number" value="10">
+            </div>
+          </div>
+
+          <div class="col-auto">
+            <label class="sr-only" for="inlineFormInputGroup">Points</label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">Points</div>
+              </div>
+              <input class="form-control" id="pointCost" min="0" max="9999" name="pointCost" oninput="setPoints(this)" type="number" value="100"></input>
+          </div>
+        </div>
+        <div class="col-auto">
+              <button class="btn btn-secondary" onclick="getFighterCardScore()">get score</button>
+              <span id="fc_score"></span>
+        </div>
+        <script>
+            function getFighterCardScore(){
+                fighterCard.fighterData.score = getUnitScore(fighterCard.fighterData);
+                document.getElementById("fc_score").innerHTML = fighterCard.fighterData.score;
+            }
+        </script>
+        <div class="col-auto">
+            <div id="colorSlider" class="colorSlider">
+                 <span id="colorSliderShow" class="show"></span>
+                 <span class="sliderbutton" onclick="sliderOff()">none</span>
+            </div>
+        </div>
+      </div>
+    </div>
+
+</div>

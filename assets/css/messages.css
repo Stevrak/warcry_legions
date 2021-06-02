@@ -1,0 +1,30 @@
+.message_container {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index:99;
+  width:100%;
+}
+.message_container .inner{
+  position:absolute;
+  width:100%;
+}
+.message_container .message {
+  width:100%;
+  padding:4px;
+  margin:4px;
+  margin-bottom:8px;
+  border-radius:5px;
+  background-color:grey;
+  box-shadow:5px 10px 8px #888888;
+  color:white;
+	transition:opacity 1s;
+  opacity: 0.8;
+  filter: alpha(opacity=80); /* For IE8 and earlier */
+}
+.message_container .success {
+  background-color:green;
+}
+.message_container .error {
+  background-color:red;
+}

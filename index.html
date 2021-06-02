@@ -1,0 +1,60 @@
+---
+# this is an empty front matter
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include templates/head.html %}
+</head>
+
+<body>
+
+    {% include templates/topbar.html fighter="active" %}
+    <div id="message_condtainer"></div>
+    <div id="main-tabs-container" class="container-fluid">
+
+
+        <!-- tabs hide, not reload elements (lets keep all our data intact) -->
+
+        <!-- fighters -->
+        <div id="main-tabs-fighters" style="display:block">
+              {% include tabs/tabContentFighters.html %}
+        </div>
+
+        <!-- abilities  arent classed and their functions clash with old fighter stuff -->
+        <div id="main-tabs-abilities" style="display:none">
+          <div class="col-lg-8">
+              <div class="jumbotron">
+                  <h1 class="display-4">Abilities</h1>
+                  <hr class="my-4">
+                    Watch this space for full abilities editor.<br>
+                    If you want to have a go at it use the legacy editor at:<br><br>
+                    <a href="https://stevrak.github.io/warcry-card-creator/abilities.html">https://stevrak.github.io/warcry-card-creator/</a>
+                  </hr>
+              </div>
+          </div>
+        </div>
+
+        <!-- builder -->
+        <div id="main-tabs-builder" style="display:none;">
+          {% include templates/mschetemplates.html %}
+          {% include tabs/tabContentBuilder.html %}
+        </div>
+
+        <!-- downloads -->
+        <div id="main-tabs-downloads" style="display:none;">
+            {% include tabs/tabContentDownloads.html %}
+        </div>
+
+        <!-- about -->
+        <div id="main-tabs-about" style="display:none;">
+          {% include tabs/tabContentAbout.html %}
+        </div>
+    </div>
+
+    {% include templates/scripts.html %}
+
+
+</body>
+
+</html>

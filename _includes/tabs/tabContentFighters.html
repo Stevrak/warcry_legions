@@ -1,0 +1,57 @@
+<div class="row mt-3">
+<!-- background images -->
+    <div style="display: none;">
+      <!-- large format images -->
+      <img id="large-dark-near" src="assets/img/fighters/large-dark-near.png">
+      <img id="large-dark-far" src="assets/img/fighters/large-dark-far.jpg">
+
+      <img id="large-fire-near" src="assets/img/fighters/large-fire-near2.png">
+      <img id="large-fire-far" src="assets/img/fighters/large-fire-far2.jpg">
+
+      <img id="large-light-near" src="assets/img/fighters/large-light-near.png">
+      <img id="large-light-far" src="assets/img/fighters/large-light-far.jpg">
+      
+      <!-- small format images -->
+      <!-- <img id="bg-alt" src="assets/img/fighters/bg-alt.jpg">-->
+      <img id="small-book-near" src="assets/img/fighters/small-book-near2.png">
+      <img id="small-book-far" src="assets/img/fighters/small-book-far2.jpg">
+
+      <!-- list format images -->
+      <img id="list-near" src="assets/img/fighters/list-near.png">
+      <img id="list-fire-far" src="assets/img/fighters/list-fire-far.jpg">
+      <img id="list-book-far" src="assets/img/fighters/list-book-far.jpg">
+
+      <!-- other card elements -->
+      <img id="weapon-profile" src="assets/img/fighters/weapon-profile.png">
+      <img id="weapon-profile-book" src="assets/img/fighters/weapon-profile-book.png">
+      <img id="weapon-profile-list" src="assets/img/fighters/weapon-profile-list.png">
+
+      <img id="circle-clean" src="assets/img/fighters/circle-clean.png">
+      <img id="circle-texture-black" src="assets/img/fighters/circle-texture-black.png">
+      <img id="circle-texture-white" src="assets/img/fighters/circle-texture-white.png">
+    </div>
+
+    <div class="col-lg-7">
+
+            {% include fighters/section-fightercard.html %}
+            {% include fighters/section-gallery.html %}
+    </div>
+
+    <div class="col-lg-5">
+        <div>
+            <div class="accordion">
+                {% include fighters/section-factionrunemarks.html %}
+                {% include fighters/section-characteristics.html %}
+                {% include fighters/section-runemarks.html %}
+                {% include fighters/section-weapons.html %}
+                {% include fighters/section-format.html %}
+
+            </div>
+
+            {% include fighters/section-actions.html %}
+
+        </div>
+    </div>
+
+</div>
+{% include fighters/section-fightercards.html %}

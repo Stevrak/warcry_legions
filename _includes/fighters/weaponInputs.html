@@ -1,0 +1,48 @@
+<label class="sr-only" for="weaponRunemarkSelect">Weapon runemark</label>
+{% capture i %}{{ include.index }}{% endcapture %}
+<div id="weaponRunemarkSelect{{ i }}" class="d-flex flex-wrap runemarks" onclick='selectWeaponmark(event,{{ i }})'>
+    <img id="wr:Axe" src="runemarks/black/weapons-axe.svg" title="Axe">
+    <img id="wr:Blast" src="runemarks/black/weapons-blast.svg" title="Blast">
+    <img id="wr:Claws" src="runemarks/black/weapons-claws.svg" title="Claws">
+    <img id="wr:Club" src="runemarks/black/weapons-club.svg" title="Club">
+    <img id="wr:Dagger" src="runemarks/black/weapons-dagger.svg" title="Dagger">
+    <img id="wr:Fangs" src="runemarks/black/weapons-fangs.svg" title="Fangs">
+    <img id="wr:Hammer" src="runemarks/black/weapons-hammer.svg" title="Hammer">
+    <img id="wr:Mace" src="runemarks/black/weapons-mace.svg" title="Mace">
+    <img id="wr:Ranged weapon" src="runemarks/black/weapons-ranged-weapon.svg" title="Ranged weapon">
+    <img id="wr:Reach weapon" src="runemarks/black/weapons-reach-weapon.svg" title="Reach weapon">
+    <img id="wr:Scythe" src="runemarks/black/weapons-scythe.svg" title="Scythe">
+    <img id="wr:Spear" src="runemarks/black/weapons-spear.svg" title="Spear">
+    <img id="wr:Sword" src="runemarks/black/weapons-sword.svg" title="Sword">
+    <img id="wr:Unarmed" src="runemarks/black/weapons-unarmed.svg" title="Unarmed">
+</div>
+
+<div class="form-row mt-4">
+    <div class="col-sm-4 form-group">
+        <label for="rangeMin{{ i }}">Range (Min)</label>
+        <input class="form-control" type="number" id="rangeMin{{ i }}" name="rangeMin" min="0" max="999" value="0" oninput="setWeapon(event,{{ i }})">
+    </div>
+    <div class="col-sm-4 form-group">
+        <label for="rangeMax{{ i }}">Range (Max)</label>
+        <input class="form-control" type="number" id="rangeMax{{ i }}" name="rangeMax" min="0" max="999" value="1" oninput="setWeapon(event,{{ i }})">
+    </div>
+    <div class="col-sm-4 form-group">
+        <label for="attacks{{ i }}">Attacks</label>
+        <input class="form-control" type="number" id="attacks{{ i }}" name="attacks" min="0" max="999" value="1" oninput="setWeapon(event,{{ i }})">
+    </div>
+    <div class="col-sm-4 form-group">
+        <label for="strength{{ i }}">Strength</label>
+        <input class="form-control" type="number" id="strength{{ i }}" name="strength" min="1" max="99" value="3" oninput="setWeapon(event,{{ i }})">
+    </div>
+    <div class="col-sm-4 form-group">
+        <label for="damageBase{{ i }}">Damage (Base)</label>
+        <input class="form-control" type="number" id="damageBase{{ i }}" name="damageBase" min="0" max="999" value="1" oninput="setWeapon(event,{{ i }})">
+    </div>
+    <div class="col-sm-4 form-group">
+        <label for="damageCrit{{ i }}">Damage (Critical)</label>
+        <input class="form-control" type="number" id="damageCrit{{ i }}" name="damageCrit" min="0" max="999" value="2" oninput="setWeapon(event,{{ i }})">
+    </div>
+</div>
+
+<label class="btn btn-primary" for="additionalWeaponMarkSelect">Load custom icon</label>
+<input class="form-control-file" id="additionalWeaponMarkSelect" oninput="onWeaponRunemarkFileSelect(this)" type="file">

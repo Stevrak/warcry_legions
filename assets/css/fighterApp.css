@@ -1,0 +1,154 @@
+.container {
+    background: #f9f9f9;
+}
+
+.flex-column {
+    max-width: 260px;
+}
+
+img {
+    margin: 5px;
+}
+
+.scale {
+    transform: scaleY(1.05);
+    padding-top: 5px;
+}
+
+.gallery_container {
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.gallery_container img {
+  object-fit:contain;
+  width:auto;
+  height:250px;
+  margin:3px;
+}
+
+.gallery_container canvas {
+  object-fit:contain;
+  width:auto;
+  height:250px;
+  margin:3px;
+}
+
+.FCgallery div canvas {
+  width:30%;
+  margin:2px;
+}
+
+.hideshow {
+  display:none;
+}
+
+.hideshow:hover {
+  display:block;
+}
+
+.galleryImageBox{
+	height:auto;
+  width:auto;
+  border:1px solid black;
+	border-radius:5px;
+	margin:5px;
+}
+.galleryImageBox > div {
+	border-radius:5px;
+	margin:5px;
+	overflow: hidden;
+}
+
+.galleryImageBox > div > img {
+	height:180px;
+	width:auto;
+  display: block;
+  transition: scale 1s;
+}
+
+.runemarks > img {
+  height:50px;
+  width:auto;
+  padding:4px;
+}
+
+.dark > img {
+  background-color:#000000;
+}
+
+[type="file"] {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  white-space: nowrap;
+  width: 1px;
+}
+
+[type="file"] + label {
+  background-color: #000;
+  border-radius: 4rem;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  padding-left: 2rem 4rem;
+  margin-bottom:0;
+}
+
+[type="file"]:focus + label,
+[type="file"] + label:hover {
+    background-color: #f15d22;
+}
+
+[type="file"]:focus + label {
+  outline: 1px dotted #000;
+}
+
+
+.colorSlider{
+  padding:0px;
+  margin-top:10px;
+}
+.colorSlider .show{
+  width:20px !important;
+  border:1px solid black;
+}
+.colorSlider span{
+  display: table-cell;
+  width:5px;
+}
+
+.colorSlider .sliderbutton{
+  border:1px solid black;
+  padding:0px 4px 0px 4px;
+  cursor:pointer;
+}
+
+img.active{
+  background-color:#2eaea6 !important;
+}
+.btn {
+  margin-right:1px;
+  margin-bottom:1px;
+}
+.buttonRune {
+  width:20px;
+  height:auto;
+  margin:-2px -2px -2px 5px;
+  padding:0;
+}
+.listRune{
+  background-color: #2eaea6 !important;
+  width:auto;
+  height:40px;
+  margin:1px;
+  padding:5px;
+}
+
+.unitTable td{
+  padding:2px;
+  vertical-align: middle !important;
+}

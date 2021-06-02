@@ -1,0 +1,73 @@
+<div class="row mt-1">
+
+      <!-- top bar for table controls -->
+          <div class="form-row align-items-center">
+            <div class="col-auto">
+              <button class="btn btn-primary" onclick="builderAddAllianceTabs()">Refresh</button>
+            </div>
+
+              <div class="col-auto">
+                <button class="btn btn-outline-secondary" onclick="tableSelectAll(unitTableContainer)">Select All</button>
+              </div>
+
+              <div class="col-auto">
+                  <button class="btn btn-outline-secondary" onclick="tableSelectAll(unitTableContainer,true)">Select None</button>
+              </div>
+
+              <div class="col-auto">
+                <button class="btn btn-success" onclick="getLists(unitTableContainer)">make lists</button>
+              </div>
+
+              <div class="col-auto">
+                <label class="sr-only" for="cost_input" title="Total points for list">Points</label>
+                <div class="input-group"><!-- mb-2 here-->
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">Points</div>
+                  </div>
+                  <input class="form-control" type="text" id="cost_input" value="1000">
+                </div>
+              </div>
+
+              <div class="col-auto">
+                <label class="sr-only" for="leeway_input" title="Points under total we will accept for final lists">Under</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">Under</div>
+                  </div>
+                  <input class="form-control" type="text" id="leeway_input" value="5">
+                </div>
+              </div>
+              <div class="col-auto">
+              <select id="listSort1" class="custom-select" aria-label="Sort By" title="sort final lists by">
+                <option selected>Sort results by</option>
+                <option value="totalModels">total models</option>
+                <option value="wounds">total wounds</option>
+                <option value="score">total score</option>
+                <option value="critical">total critical</option>
+              </select>
+              </div>
+              <div class="col-auto">
+              <select id="listSort2" class="custom-select" aria-label="Sort By" title="the first sort value being equal, additionally sort by">
+                <option selected>then by</option>
+                <option value="totalModels">total models</option>
+                <option value="wounds">total wounds</option>
+                <option value="score">total score</option>
+                <option value="critical">total critical</option>
+              </select>
+              </div>
+          </div>
+          <!-- unit table -->
+
+
+        </div>
+
+        <div class="row mt-1">
+            <span id="builderAllianceContainer"><span>Click Refresh to generate unit selections</span></span>
+            <span id="builderFactionContainer"></span>
+        </div>
+
+<div class="row mt-1">
+  <div id="unitTableContainer" class="panel-body table-responsive tableFixHead" style="font-size:16px;width:100%;height:500px"></div>
+
+  <div id="listContainer" class="d-flex flex-wrap flex-row" style="font-size:16px;width:100%;"></div>
+</div>

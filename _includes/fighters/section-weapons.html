@@ -1,0 +1,35 @@
+                <div class="card">
+                    <div class="card-header" id="fightersHeadingSixOne">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#fightersCollapseSixOne" aria-expanded="false" aria-controls="fightersCollapseSixOne">
+                                First weapon
+                        </button>
+                        <button checked class="btn btn-outline-primary" id="weaponEnabled0" onclick="onWeaponControlsToggled(this,0)" type="checkbox">Equipped</button>
+                    </div>
+                    <div class="collapse" id="fightersCollapseSixOne">
+                        <div class="card-body">
+                            <div id="weapon1">
+                                <div class="mt-4" id="weaponInputs">
+                                    {% include fighters/weaponInputs.html weapon="weapon1" index=0 %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="fightersHeadingSixTwo">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#fightersCollapseSixTwo" aria-expanded="false" aria-controls="fightersCollapseSixTwo">
+                              Second weapon
+                        </button>
+                        <button checked class="btn btn-outline-primary" id="weaponEnabled1" onclick="onWeaponControlsToggled(this,1)" type="checkbox">Equipped</button>
+                    </div>
+                    <div class="collapse" id="fightersCollapseSixTwo">
+                        <div class="card-body">
+                            <div id="weapon2">
+                                <div class="mt-4" id="weaponInputs">
+                                    {% include fighters/weaponInputs.html weapon="weapon2" index=1 %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>

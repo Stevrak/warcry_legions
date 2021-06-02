@@ -1,0 +1,3 @@
+class FighterCard{
+  constructor()
+}

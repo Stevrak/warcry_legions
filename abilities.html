@@ -1,0 +1,24 @@
+---
+# this is an empty front matter
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include templates/head.html %}
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        {% include templates/topbar.html abilities="active" %}
+
+        {% include tabs/tabContentAbilities.html %}
+
+    </div>
+
+    {% include templates/scripts.html %}
+    <script src="assets/js/abilities.js"></script>
+</body>
+
+</html>
