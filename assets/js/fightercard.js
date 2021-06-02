@@ -1,6 +1,6 @@
 /**
 *
-*   fightercard is a class representing a single fightercard
+*   Fightercard is a class representing a single fightercard
 *   it manages the fighterdata for that fighter and the canvas element shown in html
 *
 *   We also keep fighterCardFormatStyles  and fighterCardLocations information on the various formats and styles of the different cards
@@ -39,9 +39,9 @@ const fighterCardLocations = {large:{  //  large format
                                                 {x: 800, y: 15, height:30},
                                                 {x: 15, y: 10, height:20}]},
                                 namestyle:{color:"black", characters:20},
-                                movement:{x: 220, y: 391,scale:40},
+                                movement:{x: 235, y: 391,scale:40},
                                 toughness:{x: 545, y: 391, scale:40},
-                                wounds:{x: 400, y: 510,scale:40},
+                                wounds:{x: 415, y: 510,scale:40},
                                 cost:{x: 805, y: 160,scale:40},
                                 fighterImage:{x:1386, y:500,boxWidth:.3},
                                 weapon:[{start:[{x:50,y:800}, //when 1 only
