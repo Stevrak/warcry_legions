@@ -1,13 +1,12 @@
 /**
 *
-*   @Class
-*   treat fighter card as canvas?
+*   fightercard is a class representing a single fightercard
+*   it manages the fighterdata for that fighter and the canvas element shown in html
 *
+*   We also keep fighterCardFormatStyles  and fighterCardLocations information on the various formats and styles of the different cards
 */
 
-// should probably combine these two arrays into one (so each fcloc is inside fcFormatStyles at appropriate level)
-//const fighterCardFormats = ["large","small","list"];
-//styles and background images
+// card formats/styles and their different background/runemark images
 const fighterCardFormatStyles = { large:{ // 0 is large size, with several formats
                                   dark:{bkfar:$("#large-dark-far")[0], bknear:$("#large-dark-near")[0],
                                         runecircle:$("#circle-clean")[0], weapons:[$("#weapon-profile")[0],$("#weapon-profile")[0]]},
@@ -29,14 +28,11 @@ const fighterCardFormatStyles = { large:{ // 0 is large size, with several forma
 
                                         } }
 
-// all the text and stat locations
-/* also used in editor to check click regions
-*   for traversing the data for drawing we could do:  (save index in format)
-*   format = "large" => fighterCardFormats.findIndex(i => i=="large")
-*
-    cardloc = fighterCardLocations[format]
-*   cardloc.wounds.x, cardloc.weapon[0].range.x, etc
-*/
+/*
+ * locations within card formats to draw text/runes, etc
+ * also can used in  proposed advanced editor to check click regions
+ *
+ */
 const fighterCardLocations = {large:{  //  large format
                                 dimensions:{width:1772,height:1241},  // assumed max size (so bkImgs can have different reds)
                                 options:{name:[ {x: 800, y: 20, height:70},
