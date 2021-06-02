@@ -163,6 +163,7 @@ function setAlliance(e){
 
   function setMovement(e){
     fighterCard.fighterData.movement = e.value;
+    fighterCard.draw();
   }
 
 
