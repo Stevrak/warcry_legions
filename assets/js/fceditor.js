@@ -45,6 +45,9 @@ function selectFactionRunemark(e){
   clickRadB(e);
 }
 
+// When resetting editor or loading a fighterCard to editor
+// we take new fighterData from previously altered fighterCard (default editor Fighercard)
+// and set our runemarks in selection gallery id=tagRunemarkSelect to it's values
 
 function fighterCardToRunemarkSelect(id = "tagRunemarkSelect"){
 
@@ -96,6 +99,10 @@ function selectWeaponmark(e, weapon){
     clickRadB(e);
 }
 
+// for weapon index weapon, and input field change from event.target
+// use the pre-set name field on inputs to determine what stat needs changing
+// and push value to that weapon[weapon] stat
+
 function setWeapon(e, weapon){
     const stat = e.target.name;
     const value = e.target.value;
@@ -139,7 +146,7 @@ function onWeaponControlsToggled(weaponCheckBox,weapon,set) {
 /*
 *
 *     stat setters
-*
+*     interacts with the var fighterCard default editing Fightercard
 */
 function setAlliance(e){
   fighterCard.fighterData.alliance = e.value;
@@ -188,12 +195,13 @@ function setAlliance(e){
 
 
 
-// currently editing fightercard placed back into units
+// currently editing fightercard placed or or saved-over back into units/fightercard gallery
 // treating unit.name as unique value (really doesn't matter, but might help player organize, also loading a card from
 // cards gallery clones it so changing some stats and saving can override it
 
 function fighterCardSave(){
 
+    // get pre-existing unit with same name
     let pre = units.findIndex( (u) => u.name == fighterCard.fighterData.name );
 
     // found pre-existing card
