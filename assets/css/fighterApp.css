@@ -152,3 +152,25 @@ img.active{
   padding:2px;
   vertical-align: middle !important;
 }
+
+.form-control+div {
+  display: none;
+}
+.form-control.error:hover+div{
+  display: inline;
+  position: absolute;
+  bottom: 100%;  /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+.tooltiptext{
+  width: auto;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+}

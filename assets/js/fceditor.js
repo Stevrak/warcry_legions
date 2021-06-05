@@ -26,7 +26,12 @@ function getLabel(element)
 // check target's parent's title for status and current target
 // for image (in our case)
 
+// I want to work in a case/switch to detect for toggles such as (delete)
+// and/or an editor toggle? for abilities/fightercard
+
 function selectFactionRunemark(e){
+
+
 
   // this case specifically cheating radB by placing only one onclick in the form, so knowing that
   // lets ensure we aren't clicking top-level button (we want child)
@@ -105,7 +110,7 @@ function selectWeaponmark(e, weapon){
 
 function setWeapon(e, weapon){
     const stat = e.target.name;
-    const value = e.target.value;
+    const value = e.target.value.replace(/(<([^>]+)>)/gi, "");
     const fd = fighterCard.fighterData.weapons[weapon];
     switch (stat){
       case "rangeMin":
@@ -178,22 +183,21 @@ function setAlliance(e){
 
   function setName(e){
 
+    let newval = e.value.replace(/(<([^>]+)>)/gi, "");
     // we found the unit name already
-    if (units.find((u)=>{u.name.toLowerCase() == e.value.toLowerCase()})){
-      console.log(e,u)
-      if (e.className.search("error")==-1)
-      e.className += " error"
+    if (units.find((u)=>{
+        console.log(u.name.toLowerCase(), newval.toLowerCase());
+        return u.name.toLowerCase() == newval.toLowerCase();
+      } ) ){
+        if (!e.className.includes("error"))
+          e.className += " error"
 
     }else{
-
-      if (e.className.search("error")==-1)
-      e.className.replace(" error","");
-      fighterCard.name = e.value;
+      if (e.className.includes("error"))
+        e.className = e.className.replace(" error","");
+      fighterCard.name = newval;
     }
   }
-
-
-
 
 // currently editing fightercard placed or or saved-over back into units/fightercard gallery
 // treating unit.name as unique value (really doesn't matter, but might help player organize, also loading a card from
