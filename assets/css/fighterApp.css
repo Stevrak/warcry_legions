@@ -156,6 +156,7 @@ img.active{
 .form-control+div {
   display: none;
 }
+
 .form-control.error:hover+div{
   display: inline;
   position: absolute;

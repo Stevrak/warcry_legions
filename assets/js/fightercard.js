@@ -66,31 +66,31 @@ const fighterCardLocations = {large:{  //  large format
                               },small:{ //small
                                 dimensions:{width:443,height:192},  // assumed max size (so bkImgs can have different reds)
                                 statstyle:{height:20,color:"black"},
-                                movement:{x:327 ,y:160},
-                                toughness:{x:375 ,y:160,scale:40},
-                                wounds:{x:408 ,y:160,scale:40},
-                                cost:{x:405, y:40,scale:40},
+                                movement:{x:327 ,y:160,scale:30},
+                                toughness:{x:375 ,y:160,scale:30},
+                                wounds:{x:412 ,y:160,scale:30},
+                                cost:{x:405, y:40,scale:35},
                                 fighterImage:{x:365, y:99,boxWidth:.25},
                                 weapon:[{ start:{x:16, y:58},
                                           runemark:{x:25,y:36,size:40},
-                                          range:{x:72,y:48,scale:23},
-                                          attacks:{x:117,y:48,scale:23},
-                                          strength:{x:164 ,y:48,scale:23},
-                                          damage:{x:208,y:48,scale:23}},
+                                          range:{x:72,y:48,scale:18},
+                                          attacks:{x:117,y:48,scale:18},
+                                          strength:{x:164 ,y:48,scale:18},
+                                          damage:{x:208,y:48,scale:18}},
                                         { start:{x:16, y:58},
                                           background:{x:0,y:0,scale:1}, // weap 2
                                           runemark:{x:25,y:90,size:40},
-                                          range:{x:72,y:105,scale:23},
-                                          attacks:{x:117,y:105,scale:23},
-                                          strength:{x:164 ,y:105,scale:23},
-                                          damage:{x:208,y:105,scale:23}}],
+                                          range:{x:72,y:105,scale:18},
+                                          attacks:{x:117,y:105,scale:18},
+                                          strength:{x:164 ,y:105,scale:18},
+                                          damage:{x:208,y:105,scale:18}}],
                                 factioncircle:{x:320,y:40,size:55},
                                 factionrunemark:{x:320,y:40,size:45},
-                                runemarks:[ {x: 272, y: 75, bgsize:40,size:30},
-                                            {x: 272, y: 118, bgsize:40,size:30},
-                                            {x: 272, y: 161, bgsize:40,size:30}],
-                                name:[ {x: 15, y: 20, height:30},
-                                       {x: 15, y: 10, height:24},
+                                runemarks:[ {x: 272, y: 75, bgsize:40,size:28},
+                                            {x: 272, y: 118, bgsize:40,size:28},
+                                            {x: 272, y: 161, bgsize:40,size:28}],
+                                name:[ {x: 15, y: 20, height:22},
+                                       {x: 15, y: 10, height:22},
                                        {x: 15, y: 10, height:15}]
                               },list:{ // list
                                 dimensions:{width:1772,height:300},
@@ -754,7 +754,7 @@ drawFighterName(){
     // defaults
     let color = "white";
     let font = "SinaNovaReg";
-    let characters = 16;
+    let characters = 19;
     // if there are styles (color,font)
     if (fc.namestyle){
       if(fc.namestyle.color) color = fc.namestyle.color;
